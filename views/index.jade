@@ -1,6 +1,6 @@
 extends layout
 
-block gstyle
+block contentHead
   style
     .carousel {
       margin-bottom: 10px;
@@ -20,11 +20,11 @@ block gstyle
       color: #5a5a5a;
     }
     .carousel .item {
-      height: 500px;
+      height: 450px;
     }
     .carousel img {
       min-width: 100%;
-      height: 500px;
+      height: 450px;
     }
     .carousel-caption {
       background-color: transparent;
@@ -56,11 +56,11 @@ block gstyle
 
     @media (max-width: 979px) {
       .carousel .item {
-        height: 500px;
+        height: 450px;
       }
       .carousel img {
         width: auto;
-        height: 500px;
+        height: 450px;
       }
       .featurette {
         height: auto;
@@ -125,13 +125,13 @@ block contentBody
               | 享用有履歷的優質柳丁
             p.lead
               | 秉持對家鄉的關心，雲林科技大學雲端農業服務中心率先將雲端資訊系統導入農業，全程追蹤管理農產品的進產銷存及檢驗，使用企業資規劃系統建立可徵信的履歷
-            a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
+            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
       .item
         .container
           .carousel-caption
             h1 開心農場：買得安心，吃的健康
             p.lead 讓消費者以平價購買安全健康的農產品，果農得到合理收入是我們的使命，邀請您參與台灣農業e化的轉型！
-            a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
+            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
       .item
         .container
           .carousel-caption
@@ -140,7 +140,7 @@ block contentBody
               | 特點...
               br
               | 11/28將進行宅配
-            a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
+            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
       .item
         .container
           .carousel-caption
@@ -149,7 +149,7 @@ block contentBody
               | 特點...
               br
               | 12/12將進行宅配
-            a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
+            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
     a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
     a.right.carousel-control(href='#myCarousel', data-slide='next') ›
   .container.marketing

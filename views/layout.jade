@@ -2,7 +2,7 @@ doctype 5
 html
   head
     meta(charset='utf-8')
-    title title
+    title #{title}
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
     meta(name='author', content='')
@@ -58,7 +58,7 @@ html
             margin: -20px;
           }
         }
-    block gstyle
+    block contentHead
 
     //if lt IE 9
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
@@ -71,15 +71,17 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='#') 雲端柳丁
+          a.brand(href='/') 雲端柳丁
+          a.brand(href='#') 前往雲端農場
           .nav-collapse.collapse
             ul.nav
               li
-                a(href='about.html') 關於我們
+                a(href='#') 關於我們
               li
-                a(href='press.html') 新聞報導
+                a(href='#') 新聞報導
               li
-                a(href='feedback.html') 意見回饋
+                a(href='#') 意見回饋
+
 
     block contentBody
 
@@ -88,12 +90,46 @@ html
         p.pull-right
           a(href='#') 回到頁首
           span -
-          a(href='about.html') 關於我們
-          span -
-          a(href='press.html') 新聞報導
-          span -
-          a(href='feedback.html') 意見回饋
+          a(href='#') 意見回饋
+          br
+          a.twitter-share-button(
+            href='https://twitter.com/share', 
+            data-url='http://localhost:3000', 
+            data-text='雲端農場，歡迎參觀 \\nhttp://localhost:3000', 
+            data-lang='zh-tw') 推文
+
         p
           | © 2012 ACloud, Inc.
+          br
+          a.fb-like(
+            data-href='http://localhost:3000', 
+            data-send='false', 
+            data-layout='button_count', 
+            data-width='450', 
+            data-show-faces='false')
+
+
+          
+          
+
+    #fb-root
+    script
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;js.src="//platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,"script","twitter-wjs");
+    script
+      !function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=144361232326542";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk');
+
     script(type='text/javascript', src='js/jquery-1.8.2.min.js')
     script(type='text/javascript', src='js/bootstrap.min.js')
