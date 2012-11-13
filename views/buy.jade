@@ -1,0 +1,49 @@
+extends layout
+
+block gstyle
+  style
+    .container.marketing{
+      margin-top: 70px;
+    }
+    @media (max-width: 767px) {
+      .container.marketing{
+        margin-top: -10px;
+      }
+    }
+block contentBody
+  .container.marketing
+    h2 請選擇購買方式
+    p
+    .row-fluid
+      ul.thumbnails
+        li.span4
+          .thumbnail
+            img(src='http://placehold.it/300x200', alt='')
+            .caption
+              h3 YAHOO
+              p
+              p
+                a.btn.btn-primary(href='#') 前往購買
+        li.span4
+          .thumbnail
+            img(src='http://placehold.it/300x200', alt='')
+            .caption
+              h3 露天
+              p
+              p
+                a.btn.btn-primary(href='#') 前往購買
+        li.span4
+          .thumbnail
+            img(src='http://placehold.it/300x200', alt='')
+            .caption
+              h3 傳真/mail 訂購
+              p
+                | 請先下載文件，並將填寫好的表單傳真或mail寄出，我們將儘快處理您的訂單
+                br
+                | 傳真電話：
+                br
+                | mail：
+              p
+                a.btn.btn-primary(href='doc/order.docx') 下載表單
+
+ 

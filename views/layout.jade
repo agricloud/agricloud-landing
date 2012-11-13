@@ -1,7 +1,99 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset='utf-8')
+    title title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/bootstrap-responsive.css', rel='stylesheet')
+
+
+    style
+        body {
+          padding-bottom: 10px;
+          color: #5a5a5a;
+        }
+        footer {
+          padding-top: 20px;
+        }
+        .navbar-wrapper {
+          position: relative;
+          z-index: 10;
+          margin-top: 20px;
+          margin-bottom: -90px;
+        }
+        .navbar .navbar-inner {
+          border: 0;
+          -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+          -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+          box-shadow: 0 2px 10px rgba(0,0,0,.25);
+        }
+        .navbar .brand {
+          padding: 14px 20px 16px;
+          font-size: 16px;
+          font-weight: bold;
+          text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+        }
+        .navbar .nav > li > a {
+          padding: 15px 20px;
+        }
+        .navbar .btn-navbar {
+          margin-top: 10px;
+        }
+        
+        @media (max-width: 979px) {
+          .container.navbar-wrapper {
+          margin-bottom: 0;
+          width: auto;
+        }
+        .navbar-inner {
+          border-radius: 0;
+          margin: -20px 0;
+        }
+        }
+        @media (max-width: 767px) {
+          .navbar-inner {
+            margin: -20px;
+          }
+        }
+    block gstyle
+
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+
   body
-    block content
+    .container.navbar-wrapper
+      .navbar.navbar-inverse
+        .navbar-inner
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') 雲端柳丁
+          .nav-collapse.collapse
+            ul.nav
+              li
+                a(href='about.html') 關於我們
+              li
+                a(href='press.html') 新聞報導
+              li
+                a(href='feedback.html') 意見回饋
+
+    block contentBody
+
+    .container.marketing
+      footer
+        p.pull-right
+          a(href='#') 回到頁首
+          span -
+          a(href='about.html') 關於我們
+          span -
+          a(href='press.html') 新聞報導
+          span -
+          a(href='feedback.html') 意見回饋
+        p
+          | © 2012 ACloud, Inc.
+    script(type='text/javascript', src='js/jquery-1.8.2.min.js')
+    script(type='text/javascript', src='js/bootstrap.min.js')
