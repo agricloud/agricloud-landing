@@ -3,7 +3,7 @@ extends layout
 block contentHead
   style
     .carousel {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
     .carousel .container {
       position: absolute;
@@ -17,7 +17,6 @@ block contentHead
       font-size: 120px;
       margin-top: 0;
       text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      color: #5a5a5a;
     }
     .carousel .item {
       height: 450px;
@@ -37,7 +36,7 @@ block contentHead
     .carousel-caption .lead {
       margin: 0;
       line-height: 1.25;
-      color: #000;
+      color: #fff;
       text-shadow: 0 1px 1px rgba(0,0,0,.4);
     }
     .carousel-caption .btn {
@@ -62,17 +61,7 @@ block contentHead
         width: auto;
         height: 450px;
       }
-      .featurette {
-        height: auto;
-        padding: 0;
-      }
-      .featurette-image.pull-left,
-      .featurette-image.pull-right {
-        display: block;
-        float: none;
-        max-width: 40%;
-        margin: 0 auto 20px;
-      }
+
     }
     @media (max-width: 767px) {
       .carousel {
@@ -80,7 +69,7 @@ block contentHead
         margin-left: -20px;
         margin-right: -20px;
       }
-        .carousel .container {
+      .carousel .container {
       }
       .carousel .item {
         height: 300px;
@@ -94,21 +83,14 @@ block contentHead
         margin-bottom: 40px;
       }
       .carousel-caption h1 {
-        font-size: 30px;
+        font-size: 28px;
       }
       .carousel-caption .lead,
       .carousel-caption .btn {
-        font-size: 18px;
+        font-size: 16px;
       }
       .marketing .span4 + .span4 {
         margin-top: 40px;
-      }
-      .featurette-heading {
-        font-size: 30px;
-      }
-      .featurette .lead {
-        font-size: 18px;
-        line-height: 1.5;
       }
     }
 
@@ -117,70 +99,33 @@ block contentBody
   #myCarousel.carousel.slide
     .carousel-inner
       .item.active
+        img(src='http://sphotos-c.ak.fbcdn.net/hphotos-ak-snc6/c0.0.843.403/p843x403/251962_320696254686412_1282272109_n.jpg', alt='')
         .container
           .carousel-caption
-            h1
-              | 以大賣場的價格
-              br
-              | 享用有履歷的優質柳丁
-            p.lead
-              | 秉持對家鄉的關心，雲林科技大學雲端農業服務中心率先將雲端資訊系統導入農業，全程追蹤管理農產品的進產銷存及檢驗，使用企業資規劃系統建立可徵信的履歷
+            h1 以大賣場的價格，享用有履歷的優質柳丁
+            p.lead 秉持對家鄉的關心，雲林科技大學雲端農業服務中心率先將雲端資訊系統導入農業，全程追蹤管理農產品的進產銷存及檢驗，使用企業資規劃系統建立可徵信的履歷
             //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
-      .item
+      .item(ng-repeat="item in slideList")
+        img(src='{{item.imgsrc}}', alt='')
         .container
           .carousel-caption
-            h1 開心農場：買得安心，吃的健康
-            p.lead 讓消費者以平價購買安全健康的農產品，果農得到合理收入是我們的使命，邀請您參與台灣農業e化的轉型！
-            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
-      .item
-        .container
-          .carousel-caption
-            h1 15年雲林斗六老欉柳丁
-            p.lead
-              | 特點...
-              br
-              | 11/28將進行宅配
-            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
-      .item
-        .container
-          .carousel-caption
-            h1 30年雲林斗六老欉柳丁
-            p.lead
-              | 特點...
-              br
-              | 12/12將進行宅配
-            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
+            h1 {{item.title}}
+            p.lead {{item.descript}}
+
     a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
     a.right.carousel-control(href='#myCarousel', data-slide='next') ›
   .container.marketing
     .row
-      .span3
-        img.img-circle(src='http://placehold.it/140x140')
-        h2 雞蛋
-        p 皮薄清甜
+      .span3(ng-repeat="item in itemList")
+        img.img-circle(src='{{item.imgsrc}}')
+        h2 {{item.title}}
+        p {{item.descript}}
         p
-          a.btn(href='buy') 購買去 »
-      .span3
-        img.img-circle(src='http://placehold.it/140x140')
-        h2 吉利
-        p 溫潤爽口
-        p
-          a.btn(href='#') 購買去 »
-      .span3
-        img.img-circle(src='http://placehold.it/140x140')
-        h2 發財
-        p 大粒福氣
-        p
-          a.btn(href='#') 購買去 »
-      .span3
-        img.img-circle(src='http://placehold.it/140x140')
-        h2 精品
-        p 最佳禮品
-        p
-          a.btn(href='#') 購買去 »
+          a.btn(href='buy') {{item.buttonName}}
   script
     !function ($) {
       $(function(){
         $('#myCarousel').carousel()
       })
     }(window.jQuery)
+  script(type='text/javascript', src='js/gen/controllers.js')
