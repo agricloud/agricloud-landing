@@ -65,6 +65,7 @@ html(ng-app)
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
 
   body(ng-controller="#{ctrl}")
+    #fb-root
     .container.navbar-wrapper
       .navbar.navbar-inverse
         .navbar-inner
@@ -75,13 +76,13 @@ html(ng-app)
           a.brand(href='/') 雲端柳丁
           a.brand(href='#') 前往雲端農場
           .nav-collapse.collapse
-            ul.nav
-              li
-                a(href='#') 關於我們
-              li
-                a(href='#') 新聞報導
-              li
-                a(href='#') 意見回饋
+            //- ul.nav
+            //-   li
+            //-     a(href='about') 關於我們
+            //-   li
+            //-     a(href='#') 新聞報導
+            //-   li
+            //-     a(href='#') 意見回饋
 
 
     block contentBody
@@ -90,26 +91,26 @@ html(ng-app)
       footer
         p.pull-right
           a(href='#') 回到頁首
-          span -
-          a(href='#') 意見回饋
+          //- span -
+          //- a(href='#') 意見回饋
           br
           a.twitter-share-button(
             href='https://twitter.com/share', 
-            data-url='http://localhost:3000', 
-            data-text='雲端農場，歡迎參觀 \\nhttp://localhost:3000', 
+            data-url='http://agricloud.jit.su/', 
+            data-text='雲端農場，歡迎參觀', 
             data-lang='zh-tw') 推文
 
         p
           | © 2012 ACloud, Inc.
           br
           a.fb-like(
-            data-href='http://localhost:3000', 
+            data-href='http://agricloud.jit.su/', 
             data-send='false', 
             data-layout='button_count', 
             data-width='450', 
             data-show-faces='false')
 
-    #fb-root
+
     script
       !function(d,s,id){
         var js,fjs=d.getElementsByTagName(s)[0];

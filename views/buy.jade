@@ -5,6 +5,9 @@ block contentHead
     .container.marketing{
       margin-top: 70px;
     }
+    .thumbnail.buy{
+      height:200px
+    }
     @media (max-width: 767px) {
       .container.marketing{
         margin-top: -10px;
@@ -16,34 +19,34 @@ block contentBody
     p
     .row-fluid
       ul.thumbnails
-        li.span4
-          .thumbnail
-            img(src='http://placehold.it/300x200', alt='')
-            .caption
-              h3 YAHOO
-              p
-              p
-                a.btn.btn-primary(href='#') 前往購買
-        li.span4
-          .thumbnail
-            img(src='http://placehold.it/300x200', alt='')
-            .caption
-              h3 露天
-              p
-              p
-                a.btn.btn-primary(href='#') 前往購買
-        li.span4
-          .thumbnail
-            img(src='http://placehold.it/300x200', alt='')
+        li.span6
+          .thumbnail.buy
             .caption
               h3 傳真/mail 訂購
               p
-                | 請先下載文件，並將填寫好的表單傳真或mail寄出，我們將儘快處理您的訂單
-                br
-                | 傳真電話：
-                br
-                | mail：
+                請先下載文件，並將填寫好的表單傳真或mail寄出，我們將儘快處理您的訂單
               p
                 a.btn.btn-primary(href='doc/order.docx') 下載表單
+        li.span6
+          .thumbnail.buy
+            .caption
+              h3 線上訂購
+              p
+                線上填寫相關訂購資訊，一旦確認匯款資訊，將透過電話或mail通知交易完成
+              p
+                a.btn.btn-primary(href='buyonline') 前往購買
+    .row-fluid
+      ul.thumbnails
+        li.span12
+          .thumbnail
+            .caption
+              h3 匯款資訊
+              p
+              |傳真電話：
+              br
+              |mail：
+              br
+              |匯款資訊：
+              p
 
  

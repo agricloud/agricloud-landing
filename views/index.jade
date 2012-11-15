@@ -98,14 +98,14 @@ block contentBody
 
   #myCarousel.carousel.slide
     .carousel-inner
-      .item.active
-        img(src='http://sphotos-c.ak.fbcdn.net/hphotos-ak-snc6/c0.0.843.403/p843x403/251962_320696254686412_1282272109_n.jpg', alt='')
+      .item.active(ng-repeat="item in slideList | filter:{active:true}")
+        img(src='{{item.imgsrc}}', alt='')
         .container
           .carousel-caption
-            h1 以大賣場的價格，享用有履歷的優質柳丁
-            p.lead 秉持對家鄉的關心，雲林科技大學雲端農業服務中心率先將雲端資訊系統導入農業，全程追蹤管理農產品的進產銷存及檢驗，使用企業資規劃系統建立可徵信的履歷
-            //- a.btn.btn-large.btn-primary(href='http://140.125.94.201/index') 前往雲端農場
-      .item(ng-repeat="item in slideList")
+            h1 {{item.title}}
+            p.lead {{item.descript}}
+
+      .item(ng-repeat="item in slideList| filter:{active:false}")
         img(src='{{item.imgsrc}}', alt='')
         .container
           .carousel-caption

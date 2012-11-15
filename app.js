@@ -29,6 +29,8 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/buy', routes.buy);
+app.get('/buyonline', routes.buyonline);
+app.get('/about', routes.about)
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){

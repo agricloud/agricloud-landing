@@ -1,0 +1,120 @@
+extends layout
+
+block contentHead
+  style
+    .container.about{
+      margin-top: 70px;
+    }
+    @media (max-width: 767px) {
+      .container.about{
+        margin-top: -10px;
+      }
+    }
+block contentBody
+
+  #subheader.container.about
+    .inner
+      .container
+        h1 About Us
+      //
+         /.container 
+    //
+       /inner 
+  //
+     /subheader 
+  #subpage
+    .container
+      .row
+        .span12
+          .big-intro
+            | We are regarded as industry leaders in digital strategy and solutions, focused solely on delivering great user experiences.
+        //
+           /span12 
+      //
+         /row 
+      br
+      br
+      .row
+        .span12
+          h3
+            span.slash //
+            | About The Product
+        //
+           /span12 
+        .span6
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        //
+           /span6 
+        .span6
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        //
+           /span6 
+      //
+         /row 
+      br
+      br
+      .row
+        .span12
+          h3
+            span.slash //
+            | The Team
+        //
+           /span12 
+        .span12
+          .about-user
+            .img
+              img(src='./img/avatar.png', alt='Avatar')
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+
+  #extra
+    .inner
+      .container
+        .row
+          .span4
+            h3
+              span.slash //
+              | Stay In Touch
+            p
+              | There are real people behind Reboot Landing, so if you have a question or suggestion (no matter how small) please get in touch with us:
+            ul.social-icons-container
+              li
+                a.social-icon.social-icon-twitter(href='javascript:;')
+                  | Twitter
+              li
+                a.social-icon.social-icon-googleplus(href='javascript:;')
+                  | Google +
+              li
+                a.social-icon.social-icon-facebook(href='javascript:;')
+                  | Facebook
+            //
+               /extra-social 
+          //
+             /span4 
+          .span4
+            h3
+              span.slash //
+              | Subscribe and get updates
+            p
+              | Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!
+            form
+              input(type='text', name='subscribe_email', placeholder='Your Email')
+              br
+              button.btn Subscribe
+          //
+             /span4 
+        //
+           /row 
+      //
+         /container 
+    //
+       /inner 
+  //
+     /extra 
+
