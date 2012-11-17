@@ -1,18 +1,8 @@
 extends layout
 
 block contentHead
-  style
-    .container.marketing{
-      margin-top: 70px;
-    }
-    .thumbnail.buy{
-      height:200px
-    }
-    @media (max-width: 767px) {
-      .container.marketing{
-        margin-top: -10px;
-      }
-    }
+  link(href='css/gen/buy.css', rel='stylesheet')
+
 block contentBody
   .container.marketing
     h2 請選擇購買方式

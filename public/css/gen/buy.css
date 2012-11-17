@@ -1,0 +1,16 @@
+/* line 1, ../../../src/sass/buy.scss */
+.container.marketing {
+  margin-top: 70px;
+}
+
+/* line 4, ../../../src/sass/buy.scss */
+.thumbnail.buy {
+  height: 200px;
+}
+
+@media (max-width: 767px) {
+  /* line 8, ../../../src/sass/buy.scss */
+  .container.marketing {
+    margin-top: -10px;
+  }
+}

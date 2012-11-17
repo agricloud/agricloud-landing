@@ -1,0 +1,125 @@
+/* line 1, ../../../src/sass/index.scss */
+.carousel {
+  margin-bottom: 30px;
+}
+
+/* line 4, ../../../src/sass/index.scss */
+.carousel .container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 10, ../../../src/sass/index.scss */
+.carousel-control {
+  background-color: transparent;
+  border: 0;
+  font-size: 120px;
+  margin-top: 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* line 17, ../../../src/sass/index.scss */
+.carousel .item {
+  height: 450px;
+}
+
+/* line 20, ../../../src/sass/index.scss */
+.carousel img {
+  min-width: 100%;
+  height: 450px;
+}
+
+/* line 24, ../../../src/sass/index.scss */
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+/* line 32, ../../../src/sass/index.scss */
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* line 38, ../../../src/sass/index.scss */
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+/* line 41, ../../../src/sass/index.scss */
+.marketing .span3 {
+  text-align: center;
+}
+
+/* line 44, ../../../src/sass/index.scss */
+.marketing h2 {
+  font-weight: normal;
+}
+
+/* line 47, ../../../src/sass/index.scss */
+.marketing .span3 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 979px) {
+  /* line 53, ../../../src/sass/index.scss */
+  .carousel .item {
+    height: 450px;
+  }
+
+  /* line 56, ../../../src/sass/index.scss */
+  .carousel img {
+    width: auto;
+    height: 450px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 63, ../../../src/sass/index.scss */
+  .carousel {
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  /* line 70, ../../../src/sass/index.scss */
+  .carousel .item {
+    height: 300px;
+  }
+
+  /* line 73, ../../../src/sass/index.scss */
+  .carousel img {
+    height: 300px;
+  }
+
+  /* line 76, ../../../src/sass/index.scss */
+  .carousel-caption {
+    width: 65%;
+    padding: 0 70px;
+    margin-bottom: 40px;
+  }
+
+  /* line 81, ../../../src/sass/index.scss */
+  .carousel-caption h1 {
+    font-size: 28px;
+  }
+
+  /* line 85, ../../../src/sass/index.scss */
+  .carousel-caption .lead,
+  .carousel-caption .btn {
+    font-size: 16px;
+  }
+
+  /* line 88, ../../../src/sass/index.scss */
+  .marketing .span4 + .span4 {
+    margin-top: 40px;
+  }
+}
